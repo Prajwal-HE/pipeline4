@@ -4,6 +4,7 @@ pipeline{
         stage('BUILD'){
             steps{
                 echo "hi team, good morning"
+                sh 'sleep 5'
             }
         }
     }
