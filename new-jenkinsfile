@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage('Jenkins'){
+            steps{
+                echo "Learning freestyle and pipeline job's"
+            }
+        }
+    }
+}
