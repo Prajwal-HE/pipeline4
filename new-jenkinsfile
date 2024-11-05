@@ -6,5 +6,10 @@ pipeline{
                 echo "Learning freestyle and pipeline job's"
             }
         }
+        stage('Jenkins'){
+            steps{
+                echo "Learning freestyle and pipeline job's"
+            }
+        }
     }
 }
