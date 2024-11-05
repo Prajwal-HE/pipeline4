@@ -6,9 +6,9 @@ pipeline{
                 echo "Learning freestyle and pipeline job's"
             }
         }
-        stage('Jenkins'){
+        stage('CI-CD'){
             steps{
-                echo "Learning freestyle and pipeline job's"
+                echo "Learning CI-CD pipeline job's"
             }
         }
     }
