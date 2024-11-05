@@ -13,15 +13,21 @@ pipeline{
                 sh 'sleep 5'
             }
         }
-        stage('Deploy'){
-            steps{
-                echo "This is deploying stage"
+        stages{
+            parallel{
+                stage('Deploy'){
+                    steps{
+                        echo "This is deploying stage"
+                    }
+                }
+                stage('Deploy to Test bed'){
+                    steps{
+                        echo "This is deploying to test bed stage"
+                    }
+                }
+
             }
         }
-        stage('Deploy to Test bed'){
-            steps{
-                echo "This is deploying to test bed stage"
-            }
-        }
+        
     }
 }
