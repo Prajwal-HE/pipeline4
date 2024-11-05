@@ -12,7 +12,8 @@ pipeline{
                 echo "hi team, testing..."
                 sh 'sleep 5'
             }
-        }stage('DEPLOY'){
+        }
+        stage('DEPLOY'){
             steps{
                 echo "hi team, deploying"
                 sh 'sleep 5'
