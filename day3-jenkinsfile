@@ -1,32 +1,35 @@
-pipeline{
-    agent any;
-    stages{
-        stage('BUILD'){
-            steps{
-                echo "This is building stage"
+pipeline {
+    agent any
+    
+    stages {
+        stage('BUILD') {
+            steps {
+                echo "This is the building stage"
                 sh 'sleep 5'
             }
         }
-        stage('TEST'){
-            steps{
-                echo "This is testing stage"
+
+        stage('TEST') {
+            steps {
+                echo "This is the testing stage"
                 sh 'sleep 5'
             }
-        } 
-    }
-    stages('Deploying'){
-        parallel{
-                stage('Deploy'){
-                    steps{
-                        echo "This is deploying stage"
+        }
+
+        stage('Deploying') {
+            parallel {
+                stage('Deploy') {
+                    steps {
+                        echo "This is the deploying stage"
                     }
                 }
-                stage('Deploy to Test bed'){
-                    steps{
-                        echo "This is deploying to test bed stage"
+
+                stage('Deploy to Test Bed') {
+                    steps {
+                        echo "This is deploying to the test bed stage"
                     }
                 }
             }
-        }  
-    }  
+        }
+    }
 }
